@@ -50,7 +50,7 @@ if (!force) {
 			fs.statSync(path.join(__dirname, 'bin', modPath, 'deasync.node'));
 		}
 		console.log('`' + modPath + '` exists; testing');
-		cp.execFile(process.execPath, ['quick-test.js'], function(err, stdout, stderr) {
+		cp.execFile(process.execPath, ['./quick-test.js'], function(err, stdout, stderr) {
 			if (err || stderr) {
 				console.log('Problem with the binary; manual build incoming');
 				console.log('stdout=' + stdout);
